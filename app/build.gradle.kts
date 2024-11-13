@@ -56,13 +56,15 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.kts)
-    ksp(libs.androidx.serialization)
+    ksp(libs.androidx.room.compiler)
     implementation(libs.fuel)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network)
     implementation(libs.androidx.serialization)
     implementation(libs.google.hilt.android)
     ksp(libs.google.hilt.compiler)
     implementation(libs.androidx.hilt.navigation)
-    
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
