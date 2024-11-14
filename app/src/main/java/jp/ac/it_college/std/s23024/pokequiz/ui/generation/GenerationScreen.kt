@@ -39,6 +39,7 @@ fun GenerationScreen(
                         name = "$dummyNumber 世代",
                         region = "どこか"
                     )
+                    viewModel.insert(dummyEntity)
                 }
             }
         ) {

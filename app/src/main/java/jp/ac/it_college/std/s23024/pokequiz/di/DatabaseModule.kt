@@ -10,13 +10,14 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import jp.ac.it_college.std.s23024.pokequiz.data.PokeQuizDatabase
 import jp.ac.it_college.std.s23024.pokequiz.data.impl.GenerationsRepositoryImpl
+import jp.ac.it_college.std.s23024.pokequiz.data.repository.GenerationsRepository
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class RepositoryModule {
     @Binds
-    abstract fun bindGenerationsRepository(impl: GenerationsRepositoryImpl): GenerationsRepositoryImpl
+    abstract fun bindGenerationsRepository(impl: GenerationsRepositoryImpl): GenerationsRepository
 }
 
 @Module
