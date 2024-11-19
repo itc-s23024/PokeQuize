@@ -11,6 +11,7 @@ class GenerationsRepositoryImpl @Inject constructor(
 ) : GenerationsRepository {
     override fun getAllGenerationStream(): Flow<List<GenerationEntity>> = dao.getAllGenerations()
     override fun getGenerationStream(id: Int): Flow<GenerationEntity?> = dao.getGeneration(id)
+    override fun getGenerationCount(): Flow<Int> = dao.getGenerationCount()
     override suspend fun upsertGeneration(generation: GenerationEntity) = dao.upsert(generation)
 
 }

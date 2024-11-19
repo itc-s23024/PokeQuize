@@ -13,6 +13,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import jp.ac.it_college.std.s23024.pokequiz.data.entity.GenerationEntity
 import kotlinx.coroutines.launch
 import kotlin.random.Random
@@ -24,7 +25,8 @@ fun GenerationScreen(
     viewModel: GenerationViewModel = hiltViewModel()
 ) {
     val scope = rememberCoroutineScope()
-    val generations by viewModel.generations.collectAsState(initial = emptyList())
+    val uiState by viewModel.uiState.collectAsState()
+    val generations by uiState.generations.collectAsState(initial = emptyList())
     Column(
         modifier = Modifier.fillMaxSize()
     ) {

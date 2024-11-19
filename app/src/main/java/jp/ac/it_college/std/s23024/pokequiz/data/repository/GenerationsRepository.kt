@@ -7,5 +7,6 @@ import kotlinx.coroutines.flow.Flow
 interface GenerationsRepository {
     fun getAllGenerationStream(): Flow<List<GenerationEntity>>
     fun getGenerationStream(id: Int): Flow<GenerationEntity?>
+    fun getGenerationCount(): Flow<Int>
     suspend fun upsertGeneration(generation: GenerationEntity)
 }

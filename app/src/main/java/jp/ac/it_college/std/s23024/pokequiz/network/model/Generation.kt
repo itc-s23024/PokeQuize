@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 data class Generation(
 val id: Int,
     val name: String,
-    @SerialName("main-region")
+    @SerialName("main_region")
     val mainRegion: NamedApiResource,
     val names: List<Name>,
     @SerialName("pokemon_species")
