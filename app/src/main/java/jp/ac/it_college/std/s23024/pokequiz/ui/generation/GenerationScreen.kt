@@ -33,13 +33,7 @@ fun GenerationScreen(
             onClick = {
 //                onGenerationSelected(1)
                 scope.launch {
-                    val dummyNumber = Random.nextInt(1,20)
-                    val dummyEntity = GenerationEntity(
-                        id = dummyNumber,
-                        name = "$dummyNumber 世代",
-                        region = "どこか"
-                    )
-                    viewModel.insert(dummyEntity)
+                    viewModel.generationTest()
                 }
             }
         ) {
